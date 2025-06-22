@@ -1,0 +1,19 @@
+{
+  "name": "projeto-quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch data/db.json --port 3000",
+    "client": "http-server public -p 8080",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "http-server": "^14.1.1",
+    "json-server": "^1.0.0-beta.1"
+  }
+}

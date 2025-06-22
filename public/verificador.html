@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador e Ferramentas MEI</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/verificador.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo">Entenda Seus Impostos</div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="planejamento.html">Planejamento</a>
+                <a href="verificador.html">Verificador</a>
+                <a href="videos.html">Vídeos</a>
+                <a href="#">Contato</a>
+                <a href="quiz.html">QUIZ</a>
+            </nav>
+        </header>
+
+        <main class="content-wrapper-verificador">
+            <section id="links-educativos" class="section">
+                <h2>Links Educativos</h2>
+                <div class="links-grid">
+                    <div class="link-card"><h3>O que é MEI?</h3><p>...</p><a href="..." class="btn-link">Acessar</a></div>
+                    <div class="link-card"><h3>Como se tornar MEI</h3><p>...</p><a href="..." class="btn-link">Ver Tutorial</a></div>
+                    </div>
+            </section>
+
+            <section id="conteudo-mei" class="section">
+                <h2>Informações sobre MEI</h2>
+                <div id="mei-content" class="content-grid">
+                    </div>
+            </section>
+
+            <section id="verificador" class="section">
+                <h2>Verificador de Sites do Governo</h2>
+                <div class="verificador-container">
+                    <p>Digite uma URL para verificar se é um site oficial do governo brasileiro:</p>
+                    <form id="url-form" class="url-form">
+                        <div class="input-group">
+                            <input type="url" id="url-input" placeholder="https://exemplo.gov.br" required>
+                            <button type="submit">Verificar</button>
+                        </div>
+                    </form>
+                    <div id="resultado" class="resultado"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2025 Labirinto Fiscal - Todos os direitos reservados
+        </footer>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/verificador.js"></script>
+</body>
+</html>

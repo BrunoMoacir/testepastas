@@ -1,0 +1,14 @@
+{
+  "conteudoMEI": [
+    {
+      "id": "vantagens",
+      "titulo": "Vantagens de ser MEI",
+      "descricao": "Cobertura previdenciária, CNPJ, emissão de notas fiscais e acesso a crédito com condições especiais."
+    },
+    {
+      "id": "obrigacoes",
+      "titulo": "Obrigações do MEI",
+      "descricao": "Pagamento mensal do DAS e envio da Declaração Anual de Faturamento (DASN-SIMEI) uma vez por ano."
+    }
+  ]
+}

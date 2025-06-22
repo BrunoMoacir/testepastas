@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labirinto Fiscal</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo">Entenda Seus Impostos</div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="planejamento.html">Planejamento</a>
+                <a href="verificador.html">Verificador</a>
+                <a href="videos.html">Vídeos</a>
+                <a href="#">Contato</a>
+                <a href="quiz.html">QUIZ</a>
+            </nav>
+        </header>
+
+        <section class="page-header">
+            <h1 class="page-title">PERDIDO NO LABIRINTO FISCAL</h1>
+            <p class="page-subtitle">Você não está sozinho. Entender impostos não deveria ser um desafio impossível.</p>
+        </section>
+
+        <div class="main-content">
+            <section class="doubt-section">
+                <h2>Não entendi nada!</h2>
+                <ul id="questions-list" class="doubt-list">
+                    <li data-key="irpj">O que é IRPJ?</li>
+                    <li data--key="onde-comecar">Onde eu começo?</li>
+                    <li data-key="irpf">O que é Imposto de Renda (IRPF)?</li>
+                    <li data-key="nao-declarar">O que acontece se eu não declarar meus impostos?</li>
+                    <li data-key="nota-fiscal">Preciso emitir nota fiscal? Como faço?</li>
+                    <li data-key="pagar-mei">Como faço para pagar os impostos do meu MEI?</li>
+                    <li data-key="tipos-impostos">Quais são os principais tipos de impostos no Brasil?</li>
+                    <li data-key="restituicao">O que é a restituição do Imposto de Renda?</li>
+                </ul>
+
+                <div id="answer-box">
+                    <h3>Selecione uma dúvida</h3>
+                    <p>Clique em uma das perguntas ao lado para ver a resposta aqui.</p>
+                </div>
+
+            </section>
+
+            <div class="right-section">
+
+    <section class="resources-section">
+        <h2>Recursos Oficiais</h2>
+        <ul class="resource-links">
+            <li><a href="https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria" target="_blank">Orientações Tributárias</a></li>
+            <li><a href="https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/formularios" target="_blank">Formulários e Programas</a></li>
+        </ul>
+    </section>
+
+    <section class="das-calculator-section">
+        <h2>Calculadora Rápida de DAS</h2>
+        <p class="calculator-subtitle">Estime o valor do seu imposto mensal (DAS) para 2025.</p>
+
+        <div class="form-group">
+            <label for="activity-type">Qual sua área de atuação?</label>
+            <select id="activity-type" class="form-control">
+                <option value="comercio_industria">Comércio e Indústria</option>
+                <option value="servicos">Apenas Serviços</option>
+                <option value="comercio_servicos">Comércio e Serviços (juntos)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="monthly-revenue">Seu faturamento bruto no mês (Opcional)</label>
+            <input type="number" id="monthly-revenue" class="form-control" placeholder="Ex: 5000.00">
+        </div>
+
+        <button id="calculate-das-btn" class="btn-calculate">Calcular Meu DAS</button>
+
+        <div id="das-result" class="result-box-placeholder">
+            <p>Selecione sua atividade e clique em calcular.</p>
+        </div>
+    </section>
+
+</div>
+        </div>
+
+        <div class="bottom-section">
+            <section class="simulator-section">
+                <h3 class="section-title">Emissão da Guia DAS</h3>
+                <p class="simulator-desc">Acesse o portal oficial da Receita Federal para gerar sua guia de pagamento mensal (DAS) ou consultar seus débitos.</p>
+                <a href="https://www8.receita.fazenda.gov.br/simplesnacional/aplicacoes/atspo/pgmei.app/identificacao" target="_blank" class="btn btn-primary simulator-btn">Acessar Portal PGMEI</a>
+            </section>
+            <section class="info-section">
+                <h3 class="section-title">INFORMAÇÕES</h3>
+                <ul class="bottom-links">
+                    <li><a href="#">SOBRE NÓS</a></li>
+                    <li><a href="https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/perguntas-e-respostas" target="_blank">DÚVIDAS FREQUENTES (FAQ)</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            © 2025 Labirinto Fiscal - Todos os direitos reservados
+        </footer>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

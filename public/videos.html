@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos Educativos - Labirinto Fiscal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/videos.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo">Entenda Seus Impostos</div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="planejamento.html">Planejamento</a>
+                <a href="verificador.html">Verificador</a>
+                <a href="videos.html">Vídeos</a>
+                <a href="#">Contato</a>
+                <a href="quiz.html">QUIZ</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="video-container" id="videoContainer">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/B52fufZKOAM" title="MEI - Microempreendedor Individual" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-description">
+                        <h3>MEI - Microempreendedor Individual Completo</h3>
+                        <p>Guia completo sobre o Microempreendedor Individual. Aprenda tudo sobre abertura, obrigações, benefícios e como manter seu MEI regularizado.</p>
+                    </div>
+                    <button class="delete-btn" title="Excluir vídeo">🗑️</button>
+                </div>
+                </div>
+
+            <div class="add-video-section">
+                <button id="addVideoBtn" class="add-video-btn">➕ Adicionar Vídeo do YouTube</button>
+                <div id="addVideoForm" class="add-video-form hidden">
+                    <h3>Adicionar Novo Vídeo sobre MEI</h3>
+                    <input type="text" id="videoUrl" placeholder="Cole o link do YouTube aqui..." class="video-input">
+                    <input type="text" id="videoTitle" placeholder="Título do vídeo..." class="video-input">
+                    <textarea id="videoDescription" placeholder="Descrição do vídeo..." class="video-textarea" rows="3"></textarea>
+                    <div class="form-buttons">
+                        <button id="confirmAdd" class="confirm-btn">Adicionar</button>
+                        <button type="button" id="cancelAdd" class="cancel-btn">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2025 Labirinto Fiscal - Todos os direitos reservados
+        </footer>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/videos.js"></script>
+</body>
+</html>

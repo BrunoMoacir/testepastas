@@ -1,0 +1,757 @@
+/* RESET E BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* CABEÇALHO IDÊNTICO À IMAGEM */
+        .main-header {
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .logo {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e74c3c;
+        }
+
+        /* CABEÇALHO PRINCIPAL */
+        .page-header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* CONTEÚDO PRINCIPAL - FIEL À IMAGEM */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            padding: 0;
+        }
+
+        /* SEÇÃO "NÃO ENTENDI NADA" */
+        .doubt-section {
+            padding: 40px;
+            border-right: 1px solid #eee;
+        }
+
+        .doubt-section h2 {
+            color: #e74c3c;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #e74c3c;
+        }
+
+        .doubt-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .doubt-list li {
+            background: #f8f9fa;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-left: 4px solid #3498db;
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .doubt-image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+
+        /* SEÇÃO DIREITA (RECURSOS + LOGIN) */
+        .right-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* RECURSOS ÚTEIS */
+        .resources-section {
+            padding: 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .resources-section h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .resource-links {
+            list-style: none;
+        }
+
+        .resource-links li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .resource-links a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .resource-links a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .resource-links li:before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* SEÇÃO DE VÍDEO */
+        .video-section {
+            padding: 0 40px 30px 40px;
+        }
+
+        .video-section h3 {
+            color: #27ae60;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .video-desc {
+            color: #7f8c8d;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+       /* VERSÃO CORRIGIDA PARA DEIXAR O VÍDEO RESPONSIVO */
+.video-placeholder {
+    position: relative; /* Essencial para posicionar o ícone de play */
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    background-color: #e9ecef; /* Cor de fundo cinza, como a do YouTube */
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    cursor: pointer;
+    overflow: hidden;
+
+    /* Define a proporção de 16:9 (vídeo widescreen) */
+    aspect-ratio: 16 / 9; 
+}
+
+/* O link que cobre toda a área */
+.fake-player-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+/* O ícone de "Play" (▶) */
+.play-icon {
+    /* Estilo do círculo */
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 0, 0, 0.9);
+    border-radius: 50%;
+    
+    /* Centraliza o triângulo dentro do círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Efeito de escala ao passar o mouse */
+.video-placeholder:hover .play-icon {
+    transform: scale(1.1);
+    background-color: rgba(255, 0, 0, 1);
+}
+
+/* O triângulo (símbolo de play) desenhado com bordas */
+.play-icon::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 0 12px 22px;
+    border-color: transparent transparent transparent white;
+    margin-left: 5px; /* Ajuste fino para centralizar o triângulo */
+}
+
+        /* FORMULÁRIO DE LOGIN */
+        .login-section {
+            background: #ecf0f1;
+            padding: 30px;
+            margin: 0 40px 40px 40px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .login-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .login-btn:hover {
+            background: #2980b9;
+        }
+
+        .login-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .login-links a {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .login-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* SEÇÃO INFERIOR */
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 1px solid #eee;
+        }
+        
+        .simulator-section, .info-section {
+            padding: 30px 40px;
+        }
+        
+        .simulator-section {
+            border-right: 1px solid #eee;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .bottom-links {
+            list-style: none;
+        }
+        
+        .bottom-links li {
+            margin-bottom: 12px;
+        }
+        
+        .bottom-links a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .bottom-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .main-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .main-content, .bottom-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .doubt-section, .simulator-section {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+        }
+/* --- ESTILOS PARA A SEÇÃO DE PERGUNTAS INTERATIVAS --- */
+
+/* Torna os itens da lista clicáveis */
+.doubt-list li {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+.doubt-list li:hover {
+    background-color: #e9ecef;
+}
+
+/* Estilo do item ativo (selecionado) */
+.doubt-list li.active {
+    border-left: 4px solid #e74c3c; /* Cor vermelha do título */
+    background-color: #fdf5f4;
+}
+
+/* Estilo para a caixa de resposta */
+#answer-box {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    min-height: 200px;
+}
+
+#answer-box h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+#answer-box p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+/* ESTILOS PARA A NOVA SEÇÃO DE EMISSÃO DO DAS */
+.simulator-desc {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.simulator-btn {
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+/* ESTILOS COMPLETOS DO QUIZ */
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 28px 20px;
+  box-shadow: 0 2px 12px rgba(9, 48, 112, 0.08);
+  border: 1px solid #e0e0e0;
+}
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quiz-header h1 {
+  color: #093070;
+  font-size: 26px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.quiz-header p {
+  color: #ff7645;
+  font-size: 15px;
+}
+
+.progresso {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.progresso-bar {
+  height: 100%;
+  background-color: #ff7645;
+  transition: width 0.3s ease;
+}
+
+.pergunta-texto {
+  font-size: 19px;
+  margin-bottom: 20px;
+  color: #093070;
+  font-weight: 600;
+}
+
+.opcoes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  transition: background 0.2s, border 0.2s;
+}
+
+.opcao:hover {
+  background-color: #fff6f1;
+  border: 1.5px solid #ff7645;
+}
+
+.opcao input[type="radio"] {
+  accent-color: #ff7645;
+  margin-right: 10px;
+}
+
+.botoes-navegacao {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.botoes-navegacao button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+
+.btn-voltar {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-voltar:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.btn-pular {
+  background-color: #093070;
+  color: white;
+}
+
+.btn-proximo {
+  background-color: #ff7645;
+  color: white;
+}
+
+.btn-voltar:not(:disabled):hover {
+  background-color: #c0392b;
+}
+
+.btn-pular:hover {
+  background-color: #0d417e;
+}
+
+.btn-proximo:hover {
+  background-color: #e05d2f;
+}
+
+.resultado {
+  text-align: center;
+  padding: 22px 10px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin-top: 22px;
+  border: 1px solid #e0e0e0;
+}
+
+.resultado h2 {
+  color: #093070;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.resultado p {
+  color: #7f8c8d;
+  line-height: 1.5;
+}
+
+.curiosidades-box {
+  background-color: #fff6f1;
+  border-left: 4px solid #ff7645;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.destaque {
+  font-weight: 600;
+  color: #ff7645;
+}
+
+.dado-chave {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 0.97em;
+}
+
+.mensagem-erro {
+  color: #e74c3c;
+  background-color: #f8d7da;
+  border: 1px solid #e74c3c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: none;
+}
+
+.mensagem-sucesso {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #155724;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: none;
+}
+/* ESTILOS DE BOTÕES E ÍCONES ESPECÍFICOS */
+#reminderTitle {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.btn-warning {
+    background-color: #f0ad4e;
+    color: white;
+}
+.btn-warning:hover {
+    background-color: #ec971f;
+}
+#verifyButton {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+#verifyButton:hover {
+    background-color: #2980b9;
+}
+.icon-verified {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2327ae60"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>');
+}
+.icon-warning {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f39c12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>');
+}
+.icon-danger {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e74c3c"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>');
+}
+/* ======================================= */
+/* === ESTILOS PARA A CALCULADORA DE DAS === */
+/* ======================================= */
+
+.das-calculator-section {
+    padding: 30px 40px;
+    background-color: #f8f9fa;
+}
+
+.das-calculator-section h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.calculator-subtitle {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+.das-calculator-section .form-group {
+    margin-bottom: 20px;
+}
+
+.das-calculator-section .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-calculate {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-calculate:hover {
+    background: #219653;
+}
+
+.result-box-placeholder, .result-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.result-box-placeholder {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+.result-box {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.result-box.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.result-box h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.result-box p {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.result-box .limit-alert {
+    margin-top: 15px;
+    font-weight: bold;
+}

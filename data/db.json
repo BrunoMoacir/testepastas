@@ -1,0 +1,456 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": "2",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    },
+    {
+      "id": "3",
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com"
+    },
+    {
+      "login": "oi",
+      "senha": "oi",
+      "nome": "oi",
+      "email": "oi@gmail.com",
+      "id": "mwNxGMt"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "1",
+      "titulo": "Que tipo de MEI você é?",
+      "descricao": "Descubra seu perfil de Microempreendedor Individual com este quiz divertido!",
+      "perguntas": [
+        {
+          "id": 1,
+          "texto": "Qual dessas atividades você mais se identifica?",
+          "opcoes": [
+            {
+              "texto": "Fazer artesanato ou consertar coisas com as mãos.",
+              "valor": "A"
+            },
+            {
+              "texto": "Vender produtos online ou ter um pequeno comércio.",
+              "valor": "B"
+            },
+            {
+              "texto": "Prestar serviços criativos (design, fotografia, escrita).",
+              "valor": "C"
+            },
+            {
+              "texto": "Trabalhar com tecnologia ou manutenção de equipamentos.",
+              "valor": "D"
+            },
+            {
+              "texto": "Cuidar de pessoas (aulas, saúde, beleza).",
+              "valor": "E"
+            }
+          ],
+          "tipo": "radio"
+        },
+        {
+          "id": 2,
+          "texto": "Se você ganhasse R$ 1.000,00 extra, investiria em:",
+          "opcoes": [
+            {
+              "texto": "Materiais para produzir mais itens.",
+              "valor": "A"
+            },
+            {
+              "texto": "Estoque ou anúncios para vender mais.",
+              "valor": "B"
+            },
+            {
+              "texto": "Um curso ou equipamento profissional.",
+              "valor": "C"
+            },
+            {
+              "texto": "Ferramentas ou softwares modernos.",
+              "valor": "D"
+            },
+            {
+              "texto": "Certificação ou divulgação do seu serviço.",
+              "valor": "E"
+            }
+          ],
+          "tipo": "radio"
+        },
+        {
+          "id": 3,
+          "texto": "Como é seu ambiente de trabalho ideal?",
+          "opcoes": [
+            {
+              "texto": "Em casa, com ferramentas e materiais por perto.",
+              "valor": "A"
+            },
+            {
+              "texto": "Na rua, em feiras ou no meu próprio espaço de vendas.",
+              "valor": "B"
+            },
+            {
+              "texto": "Em um escritório criativo ou home office inspirador.",
+              "valor": "C"
+            },
+            {
+              "texto": "Em um local com tecnologia e liberdade para inovar.",
+              "valor": "D"
+            },
+            {
+              "texto": "Em contato direto com clientes (salão, consultório, etc.).",
+              "valor": "E"
+            }
+          ],
+          "tipo": "radio"
+        },
+        {
+          "id": 4,
+          "texto": "Qual frase combina com você?",
+          "opcoes": [
+            {
+              "texto": "\"Faço tudo com minhas próprias mãos!\"",
+              "valor": "A"
+            },
+            {
+              "texto": "\"Onde tem cliente, eu tô lá!\"",
+              "valor": "B"
+            },
+            {
+              "texto": "\"Minha criatividade é meu produto.\"",
+              "valor": "C"
+            },
+            {
+              "texto": "\"Tecnologia e praticidade são meus pilares.\"",
+              "valor": "D"
+            },
+            {
+              "texto": "\"Gosto de ajudar ou transformar pessoas.\"",
+              "valor": "E"
+            }
+          ],
+          "tipo": "radio"
+        },
+        {
+          "id": 5,
+          "texto": "Seu cliente ideal é:",
+          "opcoes": [
+            {
+              "texto": "Alguém que valoriza produtos únicos e personalizados.",
+              "valor": "A"
+            },
+            {
+              "texto": "Quem busca preço bom e variedade.",
+              "valor": "B"
+            },
+            {
+              "texto": "Alguém que prioriza qualidade e originalidade.",
+              "valor": "C"
+            },
+            {
+              "texto": "Pessoas ou empresas que precisam de soluções rápidas.",
+              "valor": "D"
+            },
+            {
+              "texto": "Alguém que confia no seu atendimento e expertise.",
+              "valor": "E"
+            }
+          ],
+          "tipo": "radio"
+        }
+      ],
+      "resultados": {
+        "chaveResultado": {
+          "A": {
+            "perfil": "MEI Artesão/Construtor",
+            "descricao": "Você é mão na massa e adora criar ou consertar coisas com dedicação!"
+          },
+          "B": {
+            "perfil": "MEI Comerciante",
+            "descricao": "Você nasceu pra vender e fazer negócios acontecerem!"
+          },
+          "C": {
+            "perfil": "MEI Criativo",
+            "descricao": "Sua criatividade é seu produto principal (design, fotografia, escrita, etc.)."
+          },
+          "D": {
+            "perfil": "MEI Tech",
+            "descricao": "Tecnologia, consertos ou inovação são seu ponto forte!"
+          },
+          "E": {
+            "perfil": "MEI de Serviços",
+            "descricao": "Seu talento está em cuidar ou ensinar (aulas, saúde, beleza, etc.)."
+          }
+        },
+        "logica": "O perfil é definido pela opção mais frequente nas respostas (ex.: maioria de 'A' = Artesão)."
+      }
+    }
+  ],
+  "curiosidades": [
+    {
+      "id": "1",
+      "categoria": "MEI Artesão/Construtor",
+      "curiosidade": "Artigos artesanais feitos por MEIs são isentos de IPI, mas precisam de selo do INMETRO se forem brinquedos.",
+      "reflexao": "A economia criativa movimenta R$ 170 bi/ano no Brasil, mas 60% dos artesãos não emitem nota fiscal.",
+      "dado_chave": "Você pode vender em feiras sem alvará permanente, mas precisa de autorização do município para eventos."
+    },
+    {
+      "id": "2",
+      "categoria": "MEI Comerciante",
+      "curiosidade": "MEIs que vendem online podem usar o Simples Nacional para e-commerce, mas plataformas como Shopee retêm impostos automaticamente.",
+      "reflexao": "Comércio eletrônico cresceu 47% em 2023, mas 30% dos MEIs não sabem declarar vendas internacionais.",
+      "dado_chave": "Limite de R$ 81 mil/ano vale para o somatório de todas as plataformas (não por loja)."
+    },
+    {
+      "id": "3",
+      "categoria": "MEI Criativo",
+      "curiosidade": "Artistas visuais podem vender NFTs como MEI, mas a Receita ainda não tem regras claras sobre tokenização.",
+      "reflexao": "O setor criativo é o que mais cresce entre MEIs (+27% em 2023), mas só 15% declaram direitos autorais.",
+      "dado_chave": "Designers gráficos podem faturar até R$ 6.750/mês sem perder o benefício do Simples."
+    },
+    {
+      "id": "4",
+      "categoria": "MEI Tech",
+      "curiosidade": "Desenvolvedores MEI podem prestar serviço para empresas estrangeiras, mas o pagamento em criptomoedas ainda é um vácuo legal.",
+      "reflexao": "TI representa 40% dos MEIs de alto faturamento, mas 35% não sabem emitir NFS-e para clientes do exterior.",
+      "dado_chave": "Manutenção de celulares exige certificação ANATEL, mas desenvolvimento de apps é livre."
+    },
+    {
+      "id": "5",
+      "categoria": "MEI de Serviços",
+      "curiosidade": "Professores particulares MEI podem deduzir até 40% dos rendimentos como despesa operacional.",
+      "reflexao": "Serviços de beleza são 25% dos MEIs, mas apenas 8% usam apps para agendamento online.",
+      "dado_chave": "Atendimento domiciliar não precisa de alvará sanitário, mas exige autorização do condomínio."
+    }
+  ],
+  "respostas": [
+    {
+      "usuario": "anonimo",
+      "respostas": [
+        {
+          "perguntaId": 1,
+          "resposta": "A"
+        },
+        {
+          "perguntaId": 2,
+          "resposta": "A"
+        },
+        {
+          "perguntaId": 3,
+          "resposta": "B"
+        },
+        {
+          "perguntaId": 4,
+          "resposta": "E"
+        },
+        {
+          "perguntaId": 5,
+          "resposta": "D"
+        }
+      ],
+      "data": "2025-06-10T18:30:26.475Z",
+      "id": "97e3"
+    }
+  ],
+  "cronograma": [
+    {
+      "id": "1",
+      "descricao": "Pagamento mensal do DAS",
+      "mes": "Janeiro",
+      "prazo": "20/01/2025",
+      "tipo": "pagamento",
+      "status": "pendente"
+    },
+    {
+      "id": "2",
+      "descricao": "Declaração Anual do MEI",
+      "mes": "Março",
+      "prazo": "31/03/2025",
+      "tipo": "declaracao",
+      "status": "pendente"
+    },
+    {
+      "id": "cb1e",
+      "descricao": "Pagamento imposto de renda",
+      "mes": "Março",
+      "prazo": "10/03/2026",
+      "tipo": "pagamento",
+      "status": "pendente"
+    }
+  ],
+  "lembretes": [
+    {
+      "id": "2467",
+      "obrigacao_id": 1,
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-25",
+      "status": "ativo"
+    },
+    {
+      "id": "127f",
+      "obrigacao_id": 1,
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-26",
+      "status": "ativo"
+    },
+    {
+      "id": "05bd",
+      "obrigacao_id": 1,
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-20",
+      "status": "ativo"
+    },
+    {
+      "id": "b191",
+      "obrigacao_id": 1,
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-13",
+      "status": "ativo"
+    },
+    {
+      "id": "4664",
+      "obrigacao_id": 1,
+      "titulo": "Lembrete: Pagamento mensal do DASs",
+      "data": "2025-06-20",
+      "status": "ativo"
+    },
+    {
+      "id": "c519",
+      "obrigacao_id": 1,
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-11",
+      "status": "ativo"
+    },
+    {
+      "id": "71f1",
+      "obrigacao_id": 1,
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-21",
+      "status": "ativo"
+    },
+    {
+      "id": "05a9",
+      "obrigacao_id": "42e0",
+      "titulo": "Lembrete: pagamento sei la oq",
+      "data": "2025-06-19",
+      "status": "ativo"
+    },
+    {
+      "id": "5fb1",
+      "obrigacao_id": "2",
+      "titulo": "Lembrete: Declaração Anual do MEI",
+      "data": "2025-06-20",
+      "status": "ativo"
+    },
+    {
+      "id": "62e1",
+      "obrigacao_id": "b10d",
+      "titulo": "Lembrete: Pagamento Imposto de Renda",
+      "data": "2025-06-18",
+      "status": "ativo"
+    },
+    {
+      "id": "84c7",
+      "obrigacao_id": "1",
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-26",
+      "status": "ativo"
+    },
+    {
+      "id": "6fac",
+      "obrigacao_id": "1",
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-27",
+      "status": "ativo"
+    },
+    {
+      "id": "5e49",
+      "obrigacao_id": "1",
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-27",
+      "status": "ativo"
+    },
+    {
+      "id": "2b8e",
+      "obrigacao_id": "1",
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-26",
+      "status": "ativo"
+    },
+    {
+      "id": "60e1",
+      "obrigacao_id": "1",
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-27",
+      "status": "ativo"
+    },
+    {
+      "id": "f9f5",
+      "obrigacao_id": "2",
+      "titulo": "Lembrete: Declaração Anual do MEI",
+      "data": "2025-06-28",
+      "status": "ativo"
+    },
+    {
+      "id": "93e3",
+      "obrigacao_id": "1",
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-07-01",
+      "status": "ativo"
+    },
+    {
+      "id": "cd46",
+      "obrigacao_id": "cc19",
+      "titulo": "Lembrete: Pagamento conta de luz",
+      "data": "2025-06-26",
+      "status": "ativo"
+    },
+    {
+      "id": "2f8d",
+      "obrigacao_id": "1",
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-20",
+      "status": "ativo"
+    },
+    {
+      "id": "5449",
+      "obrigacao_id": "1",
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-27",
+      "status": "ativo"
+    },
+    {
+      "id": "6b5d",
+      "obrigacao_id": "2",
+      "titulo": "Lembrete: Declaração Anual do MEI",
+      "data": "2025-06-28",
+      "status": "ativo"
+    },
+    {
+      "id": "120d",
+      "obrigacao_id": "1",
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-26",
+      "status": "ativo"
+    },
+    {
+      "id": "8350",
+      "obrigacao_id": "1",
+      "titulo": "Lembrete: Pagamento mensal do DAS",
+      "data": "2025-06-27",
+      "status": "ativo"
+    }
+  ]
+}

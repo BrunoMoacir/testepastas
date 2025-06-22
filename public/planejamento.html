@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento - Labirinto Fiscal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/planejamento.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo">Entenda Seus Impostos</div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="planejamento.html">Planejamento</a>
+                <a href="verificador.html">Verificador</a>
+                <a href="videos.html">Vídeos</a>
+                <a href="#">Contato</a>
+                <a href="quiz.html">QUIZ</a>
+            </nav>
+        </header>
+        
+        <section class="user-header">
+            <div id="userInfo" class="user-greeting"></div>
+            <div class="user-status">
+                <span>Tipo: MEI</span>
+                <span>Situação: Regular</span>
+            </div>
+        </section>
+        
+        <main class="main-content">
+            <section class="schedule-section">
+                <h2 class="section-title">CRONOGRAMA SIMPLIFICADO</h2>
+                <p class="schedule-subtitle">Selecione um mês para visualizar as obrigações do MEI</p>
+                
+                <div class="schedule-form">
+                    <div class="form-group">
+                        <label for="month">MÊS</label>
+                        <select id="month">
+                            <option value="">Selecione um mês</option>
+                            <option value="Janeiro">Janeiro</option><option value="Fevereiro">Fevereiro</option><option value="Março">Março</option><option value="Abril">Abril</option><option value="Maio">Maio</option><option value="Junho">Junho</option><option value="Julho">Julho</option><option value="Agosto">Agosto</option><option value="Setembro">Setembro</option><option value="Outubro">Outubro</option><option value="Novembro">Novembro</option><option value="Dezembro">Dezembro</option>
+                        </select>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-primary" id="viewSchedule">VER CRONOGRAMA</button>
+                        <button type="button" class="btn btn-secondary" id="clearSelection">LIMPAR</button>
+                        <button type="button" class="btn btn-info" id="viewAllMonths">VER TODOS OS MESES</button>
+                        <button type="button" class="btn btn-warning" id="createObligationBtn">CRIAR OBRIGAÇÃO</button>
+                    </div>
+                </div>
+                
+                <table class="obligations-table" id="obligationsTable">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th><th>Mês</th><th>Prazo</th><th>Tipo</th><th>Status</th><th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+        
+        <footer>
+            &copy; 2025 Labirinto Fiscal - Todos os direitos reservados
+        </footer>
+    </div>
+    
+    <div id="createObligationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-create-modal">&times;</span>
+            <h3>Criar Nova Obrigação</h3>
+            <form id="createObligationForm">
+                <div class="form-group"><label for="newDescricao">Descrição:</label><input type="text" id="newDescricao" required></div>
+                <div class="form-group"><label for="newMes">Mês:</label><select id="newMes" required><option value="">Selecione...</option><option value="Janeiro">Janeiro</option><option value="Fevereiro">Fevereiro</option><option value="Março">Março</option><option value="Abril">Abril</option><option value="Maio">Maio</option><option value="Junho">Junho</option><option value="Julho">Julho</option><option value="Agosto">Agosto</option><option value="Setembro">Setembro</option><option value="Outubro">Outubro</option><option value="Novembro">Novembro</option><option value="Dezembro">Dezembro</option></select></div>
+                <div class="form-group"><label for="newPrazo">Prazo:</label><input type="date" id="newPrazo" required></div>
+                <div class="form-group"><label for="newTipo">Tipo:</label><input type="text" id="newTipo" required></div>
+                <div class="form-buttons">
+                    <button type="button" class="btn btn-secondary" id="cancelCreation">Cancelar</button>
+                    <button type="submit" id="saveObligationBtn" class="btn btn-primary">Salvar Obrigação</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="reminderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Adicionar Lembrete</h3>
+            <form id="reminderForm">
+                <input type="hidden" id="obligationId">
+                <div class="form-group"><label for="reminderDate">Data do Lembrete:</label><input type="date" id="reminderDate" required></div>
+                <div class="form-group"><label for="reminderMessage">Mensagem:</label><textarea id="reminderMessage" rows="3"></textarea></div>
+                <div class="form-buttons">
+                    <button type="button" class="btn btn-secondary" id="cancelReminder">Cancelar</button>
+                    <button type="submit" id="saveReminderBtn" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-confirmation-modal">&times;</span>
+            <h3>Lembrete Salvo!</h3>
+            <p>Seu lembrete foi criado com sucesso.</p>
+            <div class="form-buttons" style="justify-content: center; margin-top: 20px;">
+                <a href="#" id="googleCalendarLink" target="_blank" class="btn btn-primary">Adicionar ao Google Agenda</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/planejamento.js"></script>
+</body>
+</html>
