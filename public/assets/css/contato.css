@@ -1,0 +1,82 @@
+/* Estilos específicos para a página de contato */
+
+/* Importa os ícones do Bootstrap que vamos usar */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.contact-page-wrapper {
+    padding: 2rem 40px;
+}
+
+.contact-header {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 3rem;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.team-member-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.team-member-card .bi {
+    font-size: 4rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.team-member-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+    color: #34495e;
+}
+
+.team-member-card p {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+.team-member-card a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.team-member-card a:hover {
+    text-decoration: underline;
+}
