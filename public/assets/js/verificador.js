@@ -1,30 +1,13 @@
 function iniciarPaginaVerificador() {
 
     // Função para carregar conteúdo MEI do arquivo JSON
-    async function carregarConteudoMEI() {
-        try {
-            // CORREÇÃO: O JS vai procurar por este arquivo dentro da pasta 'public'
-            const response = await fetch('mei-content.json');
-            if (!response.ok) throw new Error('Arquivo não encontrado');
-            const data = await response.json();
-            
-            const container = document.getElementById('mei-content');
-            container.innerHTML = ''; // Limpa o container antes de adicionar
-            data.conteudoMEI.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'content-card';
-                card.innerHTML = `
-                    <h3>${item.titulo}</h3>
-                    <p>${item.descricao}</p>
-                `;
-                container.appendChild(card);
-            });
-        } catch (error) {
-            console.error('Erro ao carregar conteúdo MEI:', error);
-            const container = document.getElementById('mei-content');
-            container.innerHTML = `<p style="color: red; text-align: center;">Não foi possível carregar as informações sobre MEI.</p>`;
-        }
-    }
+    function iniciarPaginaVerificador() {
+    // ... (outras funções como configurarVerificadorURL continuam aqui)
+
+    // O PONTO DE ENTRADA deste script agora só precisa configurar o que sobrou
+    configurarVerificadorURL();
+    setupChecklist(); // Se você implementou a melhoria do checklist
+}
 
     // Função para configurar o verificador de URLs
     function configurarVerificadorURL() {
