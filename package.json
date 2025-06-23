@@ -4,10 +4,10 @@
   "description": "Uma aplicação Web para desmistificar as obrigações fiscais do Microempreendedor Individual (MEI).",
   "main": "index.js",
   "scripts": {
-  "start": "npx json-server --watch data/db.json --host 0.0.0.0 --port 10000",
-  "server": "npx json-server --watch data/db.json --port 3000",
-  "client": "npx http-server public -p 8080",
-  "dev": "npx concurrently \"npm run server\" \"npm run client\""
+  "start": "json-server --watch data/db.json --host 0.0.0.0 --port 10000",
+  "server": "json-server --watch data/db.json --port 3000",
+  "client": "http-server public -p 8080",
+  "dev": "concurrently \"npm run server\" \"npm run client\""
 },
   "author": "Bruno Moacir, Bernardo Faria, Rafael Torres",
   "license": "ISC",
@@ -20,8 +20,11 @@
   },
   "homepage": "https://github.com/ICEI-PUC-Minas-PPLCC-TI/atividade-01-grupo-t1-aprender-sobre-imposto#readme",
   "dependencies": {
-    "json-server": "^0.17.4"
-  },
+  "json-server": "^0.17.4",
+  "http-server": "^14.1.1",
+  "concurrently": "^8.2.2"
+}
+,
   "devDependencies": {
     "concurrently": "^8.2.2",
     "http-server": "^14.1.1"
