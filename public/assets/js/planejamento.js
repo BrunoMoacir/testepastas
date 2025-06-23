@@ -1,6 +1,6 @@
 // VERSÃO FINAL E CORRIGIDA
 function iniciarPaginaPlanejamento() {
-    const API_BASE_URL = 'http://localhost:3000';
+    const API_BASE_URL = 'https://api-labirinto-fiscal.onrender.com';
 
     // --- SELEÇÃO DE ELEMENTOS DO DOM ---
     const tbody = document.querySelector('#obligationsTable tbody');

@@ -5,7 +5,7 @@
 // --- 1. CONFIGURAÇÕES GLOBAIS ---
 const LOGIN_URL = 'login.html';
 const HOME_URL = 'index.html';
-const API_URL = 'http://localhost:3000/usuarios';
+const API_URL = 'https://api-labirinto-fiscal.onrender.com';
 
 let db_usuarios = [];
 let usuarioCorrente = {};
