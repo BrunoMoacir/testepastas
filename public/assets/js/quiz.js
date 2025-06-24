@@ -171,3 +171,4 @@ function iniciarPaginaQuiz() {
     // Ponto de entrada do script do quiz
     carregarQuiz();
 }
+document.addEventListener('DOMContentLoaded', iniciarPaginaQuiz);
