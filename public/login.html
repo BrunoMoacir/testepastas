@@ -7,47 +7,60 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-light">
-    <div id="login">
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center vh-100">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12 bg-dark p-5 rounded-3 text-white">
-                        <form class="form" id="login-form">
-                            <h3 class="text-center mb-4">Identificação de Usuário</h3>
-                            <div class="form-group mb-3">
-                                <label for="username" class="form-label">Email</label>
-                                <input type="email" name="username" id="username" class="form-control" required>
-                            </div>
-                            <div class="form-group mb-4">
-                                <label for="password" class="form-label">Senha</label>
-                                <input type="password" name="password" id="password" class="form-control" required>
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary btn-lg">Login</button>
-                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#registerModal">Registrar Novo Usuário</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+<body class="bg-light d-flex align-items-center justify-content-center vh-100">
+
+    <div class="login-card">
+        <h2 class="login-title">Labirinto Fiscal</h2>
+        <p class="login-subtitle">Acesse sua conta</p>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="email" id="username" class="form-control" placeholder="Digite seu email" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" class="form-control" placeholder="Digite sua senha" required>
+            </div>
+
+            <button type="submit" class="btn btn-login w-100">Entrar</button>
+
+            <div class="text-center mt-3">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Registrar novo usuário</a>
+            </div>
+        </form>
     </div>
 
+    <!-- Modal de Cadastro -->
     <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="registerModalLabel">Cadastro de Novo Usuário</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <form id="register-form">
-                        <div class="form-group mb-3"><label for="txt_nome">Nome completo</label><input type="text" id="txt_nome" class="form-control" required></div>
-                        <div class="form-group mb-3"><label for="txt_email">Email</label><input type="email" id="txt_email" class="form-control" required></div>
-                        <div class="form-group mb-3"><label for="txt_login">Apelido (login)</label><input type="text" id="txt_login" class="form-control"></div>
-                        <div class="form-group mb-3"><label for="txt_senha">Senha</label><input type="password" id="txt_senha" class="form-control" required></div>
-                        <div class="form-group mb-3"><label for="txt_senha2">Confirmação de Senha</label><input type="password" id="txt_senha2" class="form-control" required></div>
+                        <div class="form-group mb-3">
+                            <label for="txt_nome">Nome completo</label>
+                            <input type="text" id="txt_nome" class="form-control" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="txt_email">Email</label>
+                            <input type="email" id="txt_email" class="form-control" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="txt_login">Apelido (login)</label>
+                            <input type="text" id="txt_login" class="form-control">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="txt_senha">Senha</label>
+                            <input type="password" id="txt_senha" class="form-control" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="txt_senha2">Confirmação de Senha</label>
+                            <input type="password" id="txt_senha2" class="form-control" required>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -61,4 +74,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/login.js"></script>
 </body>
+
 </html>
