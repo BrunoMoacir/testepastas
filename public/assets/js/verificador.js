@@ -6,39 +6,40 @@ function iniciarPaginaVerificador() {
 
     // Função que configura o formulário de verificação de URL
     function configurarVerificadorURL() {
-        const form = document.getElementById('url-form');
-        const input = document.getElementById('url-input');
-        const resultado = document.getElementById('resultado');
+    const form = document.getElementById('url-form');
+    const input = document.getElementById('url-input');
+    const resultado = document.getElementById('resultado');
 
-        // Garante que o código não quebre se os elementos não existirem
-        if (!form || !input || !resultado) {
-            console.error("Elementos do formulário de verificação não encontrados.");
-            return;
-        }
+    // Garante que o código não quebre se os elementos não existirem
+    if (!form || !input || !resultado) {
+        console.error("Elementos do formulário de verificação não encontrados.");
+        return;
+    }
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede o recarregamento da página
+        const url = input.value.trim();
+        if (!url) return;
         
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); // Impede o recarregamento da página
-            const url = input.value.trim();
-            if (!url) return;
-            
-            // Lógica de verificação
-            try {
-                // Limpa a URL para análise (remove http, https, www, etc.)
-                let urlLimpa = url.toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0];
+        // Lógica de verificação
+        try {
+            // Limpa a URL para análise (remove http, https, www, etc.)
+            let urlLimpa = url.toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0];
 
-                if (urlLimpa.endsWith('.gov.br')) {
-                    resultado.innerHTML = `✅ Site oficial do governo: <strong>${urlLimpa}</strong>`;
-                    resultado.className = 'resultado sucesso';
-                } else {
-                    resultado.innerHTML = `❌ Site não oficial: <strong>${urlLimpa}</strong>`;
-                    resultado.className = 'resultado erro';
-                }
-            } catch (error) {
-                resultado.innerHTML = `URL inválida.`;
+            // AQUI ESTÁ A CORREÇÃO: Adicionamos "|| urlLimpa === 'gov.br'"
+            if (urlLimpa.endsWith('.gov.br') || urlLimpa === 'gov.br') {
+                resultado.innerHTML = `✅ Site oficial do governo: <strong>${urlLimpa}</strong>`;
+                resultado.className = 'resultado sucesso';
+            } else {
+                resultado.innerHTML = `❌ Site não oficial: <strong>${urlLimpa}</strong>`;
                 resultado.className = 'resultado erro';
             }
-        });
-    }
+        } catch (error) {
+            resultado.innerHTML = `URL inválida.`;
+            resultado.className = 'resultado erro';
+        }
+    });
+}
 
     // Função que configura o checklist (se você implementou a melhoria)
     function setupChecklist() {
@@ -88,3 +89,4 @@ function iniciarPaginaVerificador() {
     configurarVerificadorURL();
     setupChecklist(); 
 }
+document.addEventListener('DOMContentLoaded', iniciarPaginaVerificador);

@@ -76,3 +76,4 @@ function iniciarPaginaVideos() {
         addVideoBtn.style.display = 'block';
     }
 }
+document.addEventListener('DOMContentLoaded', iniciarPaginaVideos);
